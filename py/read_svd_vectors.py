@@ -8,7 +8,7 @@ import numpy as np
 Demo file showing how to extract vector representations with suprise models. 
 """
 
-from py.train_valid_test_loader import load_train_valid_test_datasets
+from train_valid_test_loader import load_train_valid_test_datasets
 
 # Load the dataset in the same way as the main problem 
 train_tuple, valid_tuple, test_tuple, n_users, n_items = \
