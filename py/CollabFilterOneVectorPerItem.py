@@ -12,7 +12,7 @@ import autograd.numpy as ag_np
 
 # Use helper packages
 from AbstractBaseCollabFilterSGD import AbstractBaseCollabFilterSGD
-from py.train_valid_test_loader import load_train_valid_test_datasets
+from train_valid_test_loader import load_train_valid_test_datasets
 
 # Some packages you might need (uncomment as necessary)
 ## import pandas as pd
