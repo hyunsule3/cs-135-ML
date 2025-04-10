@@ -1,49 +1,68 @@
-🎬 MovieLens Data Analysis: Predicting Ratings and Understanding Preferences
-Welcome! This project explores the MovieLens dataset with the goal of building predictive models for user ratings and uncovering hidden patterns in movie preferences. By combining statistical insights with advanced machine learning techniques, this analysis provides a robust approach to recommendation systems and predictive modeling.
+## 🎥 MovieLens Data Analysis: Predicting Ratings and Understanding Preferences
 
-🔍 Project Overview
+Welcome! This project explores the [MovieLens dataset](https://grouplens.org/datasets/movielens/) with the goal of building predictive models for user ratings and uncovering hidden trends in movie preferences. By combining statistical insights with advanced machine learning techniques, this analysis provides a robust approach to recommendation systems and predictive modeling.
+
+---
+
+### 🔍 Project Overview
+
 The main focus of this analysis is to:
 
-Predict user ratings accurately using both linear and non-linear models.
+- Predict user ratings using both linear and non-linear models.
+- Tackle real-world challenges like the cold start problem.
+- Understand how movie ratings evolve over time.
+- Evaluate how different modeling techniques perform under various preprocessing strategies.
 
-Tackle real-world challenges like the cold start problem.
+---
 
-Understand how movie ratings evolve over time.
+### ✨ Key Insights
 
-Evaluate how different modeling techniques perform under various preprocessing strategies.
+- 📆 **Temporal Trends Matter**  
+  Ratings change significantly across decades. Incorporating temporal features such as release year helped capture evolving viewer preferences.
 
-✨ Key Insights
-📅 Temporal Trends Matter: Ratings change significantly across decades. Incorporating temporal features (like release year) helped capture evolving viewer preferences.
+- 🎯 **Distribution Adjustments**  
+  Aligning the test set’s rating distribution with the training set led to improved accuracy and reduced bias.
 
-📊 Distribution Adjustments: Aligning the test set's rating distribution with the training set led to improved accuracy and reduced bias.
+- 📚 **Factorization Machines (FM)**  
+  FM models captured complex feature interactions and outperformed traditional matrix factorization techniques.
 
-🧠 Factorization Machines: FM models captured complex feature interactions, significantly boosting predictive performance.
+- 👥 **K-Nearest Neighbors (KNN)**  
+  Used to mitigate the cold start problem, KNN-based models leveraged user/item similarity to generate better recommendations for new users and movies.
 
-👥 K-Nearest Neighbors: KNN helped address the cold start problem by making predictions based on user/movie similarity.
+- 📈 **Isotonic Regression**  
+  This technique provided a flexible, non-linear fit for capturing yearly variations in rating trends.
 
-📈 Isotonic Regression: This technique modeled non-linear patterns in yearly rating trends with surprising flexibility.
+---
 
-🧰 Techniques & Tools
-Python (Pandas, NumPy, Scikit-learn, LightFM, Surprise)
+### 🧰 Tools & Techniques
 
-Factorization Machines (via lightfm)
+- **Languages**: Python  
+- **Libraries**: Pandas, NumPy, Scikit-learn, Surprise, LightFM  
+- **Models Used**:  
+  - Linear Regression  
+  - K-Nearest Neighbors  
+  - Factorization Machines  
+  - Isotonic Regression
 
-KNN-based collaborative filtering
+- **Techniques**:  
+  - Temporal feature engineering  
+  - Cold start problem handling  
+  - Rating distribution normalization  
+  - RMSE and MAE evaluation
 
-Isotonic regression for trend fitting
+---
 
-Custom feature engineering (temporal bins, user/movie encoding, etc.)
+### 📁 Repository Structure
 
-🧠 What I Learned
-This project sharpened my understanding of recommender systems, especially:
+├── py/ # Scripts for collaborative filtering and vector processing │ ├── CollabFilterOneVectorPerItem.py │ └── read_svd_vectors.py ├── Movie Recommendation Project.ipynb # Main notebook with full analysis ├── .gitignore ├── README.md
 
-The importance of feature engineering in enhancing model performance.
+---
 
-How to handle data imbalance and bias.
+### 📫 Author
 
-Practical strategies for cold start mitigation.
+**HyunSu (John) Lee**  
+Graduate Student in Data Science  
 
-The real-world value of combining classic statistical techniques with modern machine learning models.
+---
 
-🚀 Try It Out
-You can explore the full analysis in the MovieLens_Analysis.ipynb notebook. Each step is well-commented and modular for easy replication or extension.
+> This project was completed as part of a graduate-level data science course and demonstrates end-to-end recommendation system development—from feature engineering to model evaluation.
